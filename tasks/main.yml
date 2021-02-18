@@ -1,0 +1,28 @@
+---
+# tasks file for v98765_vm_single
+
+- include: preinstall.yml
+  tags:
+    - victoriametrics_install
+    - victoriametrics_configure
+    - victoriametrics_run
+
+- include: install.yml
+  become: true
+  tags:
+    - victoriametrics_install
+
+- include: configure.yml
+  become: true
+  tags:
+    - victoriametrics_configure
+
+- name: ensure victoria-metrics service is started and enabled
+  become: true
+  systemd:
+    daemon_reload: true
+    name: victoriametrics
+    state: started
+    enabled: true
+  tags:
+    - victoriametrics_run

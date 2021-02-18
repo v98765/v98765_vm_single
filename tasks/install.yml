@@ -1,0 +1,35 @@
+---
+- block:
+
+    - name: Ensure existense of /tmp/victoria-metrics-{{ victoriametrics_version }}
+      ansible.builtin.file:
+        path: "/tmp/victoria-metrics-v{{ victoriametrics_version }}"
+        state: directory
+
+    - name: Unarchive victoriametrics binaries
+      become: false
+      unarchive:
+        src: "{{ victoriametrics_repo_dir }}/victoria-metrics-amd64-v{{ victoriametrics_version }}.tar.gz"
+        dest: "/tmp/victoria-metrics-v{{ victoriametrics_version }}"
+        creates: "/tmp/victoria-metrics-v{{ victoriametrics_version }}/victoria-metrics-prod"
+      check_mode: false
+
+    - name: Copy victoriametrics binaries to remote
+      ansible.builtin.copy:
+        src: "/tmp/victoria-metrics-v{{ victoriametrics_version }}/victoria-metrics-prod"
+        dest: "/usr/local/bin/victoriametrics"
+        owner: "{{ victoriametrics_system_user }}"
+        group: "{{ victoriametrics_system_group }}"
+        mode: 0755
+        remote_src: yes
+      notify: restart vm
+
+  when: victoriametrics_is_installed.stat.exists is defined and not victoriametrics_is_installed.stat.exists
+
+- name: create victoriametrics data directory
+  file:
+    path: "{{ victoriametrics_storageDataPath }}"
+    state: directory
+    owner: "{{ victoriametrics_system_user }}"
+    group: "{{ victoriametrics_system_group }}"
+    mode: 0755

@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include v98765_vm_single"
+      include_role:
+        name: "v98765_vm_single"

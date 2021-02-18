@@ -1,0 +1,15 @@
+---
+# defaults file for v98765_vm_single
+victoriametrics_version: "1.54.1"
+victoriametrics_system_user: "victoriametrics"
+victoriametrics_system_group: "victoriametrics"
+victoriametrics_install_dir: "/usr/local/bin"
+# cd /var/tmp/archive
+# wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-amd64-v1.54.1.tar.gz
+# wget -o checksums.txt https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-arm64-v1.54.1_checksums.txt
+victoriametrics_repo_dir: "/var/tmp/archive"
+victoriametrics_checksum: "{{ victoriametrics_repo_dir }}/checksums.txt"
+# vm flags for env file
+# https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables
+victoriametrics_storageDataPath: "/var/lib/vm"
+victoriametrics_retentionPeriod: "12"

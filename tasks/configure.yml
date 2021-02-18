@@ -1,0 +1,18 @@
+---
+- name: create env file
+  template:
+    src: victoriametrics.j2
+    dest: /etc/default/victoriametrics
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart vm
+
+- name: create systemd service unit
+  template:
+    src: victoriametrics.service.j2
+    dest: /lib/systemd/system/victoriametrics.service
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart vm
