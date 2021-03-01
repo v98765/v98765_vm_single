@@ -8,7 +8,6 @@ victoriametrics_install_dir: "/usr/local/bin"
 # wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-amd64-v1.54.1.tar.gz
 # wget -O vm_checksums.txt https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-arm64-v1.54.1_checksums.txt
 victoriametrics_repo_dir: "/var/tmp/archive"
-victoriametrics_checksum: "{{ victoriametrics_repo_dir }}/vm_checksums.txt"
 # vm flags for env file
 # https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables
 victoriametrics_storageDataPath: "/var/lib/vm"
