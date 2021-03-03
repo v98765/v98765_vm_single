@@ -1,12 +1,9 @@
 ---
 # defaults file for v98765_vm_single
-victoriametrics_version: "1.54.1"
+victoriametrics_version: "1.55.0"
 victoriametrics_system_user: "victoriametrics"
 victoriametrics_system_group: "victoriametrics"
 victoriametrics_install_dir: "/usr/local/bin"
-# cd /var/tmp/archive
-# wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-amd64-v1.54.1.tar.gz
-# wget -O vm_checksums.txt https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.54.1/victoria-metrics-arm64-v1.54.1_checksums.txt
 victoriametrics_repo_dir: "/var/tmp/archive"
 # vm flags for env file
 # https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables
