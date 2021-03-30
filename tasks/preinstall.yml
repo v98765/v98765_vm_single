@@ -15,8 +15,3 @@
     system: true
     createhome: false
   when: victoriametrics_system_user != "root"
-
-- name: Check if VictoriaMetrics singe node is installed
-  ansible.builtin.stat:
-    path: "{{ victoriametrics_install_dir }}/victoriametrics"
-  register: victoriametrics_is_installed

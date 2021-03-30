@@ -24,8 +24,6 @@
         remote_src: yes
       notify: restart vm
 
-  when: victoriametrics_is_installed.stat.exists is defined and not victoriametrics_is_installed.stat.exists
-
 - name: "Create victoriametrics data directory {{ victoriametrics_storageDataPath }}"
   file:
     path: "{{ victoriametrics_storageDataPath }}"
