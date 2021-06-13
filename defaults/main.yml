@@ -1,6 +1,6 @@
 ---
 # defaults file for v98765_vm_single
-victoriametrics_version: "1.57.1"
+victoriametrics_version: "1.61.1"
 victoriametrics_system_user: "victoriametrics"
 victoriametrics_system_group: "victoriametrics"
 victoriametrics_install_dir: "/usr/local/bin"

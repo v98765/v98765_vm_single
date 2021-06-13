@@ -13,7 +13,7 @@ Role Variables
 
 Name | Default Value | Description
 ---|---|---
-`victoriametrics_version` |  "1.57.1" | current version
+`victoriametrics_version` |  "1.61.1" | current version
 `victoriametrics_system_user` | "victoriametrics" | 
 `victoriametrics_system_group` | "victoriametrics" |
 `victoriametrics_install_dir` | "/usr/local/bin" |
@@ -21,13 +21,13 @@ Name | Default Value | Description
 `victoriametrics_storageDataPath` | "/var/lib/vm" | storage directory
 `victoriametrics_retentionPeriod` | "12" | 1 year retention
 
-Read this [https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables](https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables) аnd set more vars, put it into `templates/victoriametrics.j2`
+Read this [https://docs.victoriametrics.com/#environment-variables](https://docs.victoriametrics.com/#environment-variables) аnd set more vars, put it into `templates/victoriametrics.j2`
 
 Copy vm files to `victoriametrics_repo_dir`:
 ```sh
 mkdir -p /var/tmp/archive
 cd /var/tmp/archive
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.57.1/victoria-metrics-amd64-v1.57.1.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.61.1/victoria-metrics-amd64-v1.61.1.tar.gz
 ```
 
 Example Playbook
