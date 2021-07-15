@@ -13,7 +13,7 @@ Role Variables
 
 Name | Default Value | Description
 ---|---|---
-`victoriametrics_version` |  "1.62.0" | current version
+`victoriametrics_version` |  "1.63.0" | current version
 `victoriametrics_system_user` | "victoriametrics" | 
 `victoriametrics_system_group` | "victoriametrics" |
 `victoriametrics_install_dir` | "/usr/local/bin" |
@@ -27,7 +27,7 @@ Copy vm files to `victoriametrics_repo_dir`:
 ```sh
 mkdir -p /var/tmp/archive
 cd /var/tmp/archive
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.62.0/victoria-metrics-amd64-v1.62.0.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.63.0/victoria-metrics-amd64-v1.63.0.tar.gz
 ```
 
 Example Playbook
