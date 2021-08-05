@@ -13,9 +13,8 @@ ExecReload=/usr/bin/curl -s 127.0.0.1:8248/-/reload
 ExecStart={{ victoriametrics_install_dir }}/victoriametrics -envflag.enable -envflag.prefix=VM_
 
 SyslogIdentifier=victoriametrics
-Restart=on-failure
-LimitNOFILE=infinity
 Restart=always
+LimitNOFILE=infinity
 
 PrivateTmp=yes
 ProtectHome=yes
