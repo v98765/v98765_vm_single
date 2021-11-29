@@ -8,17 +8,14 @@
     - victoriametrics_run
 
 - include: install.yml
-  become: true
   tags:
     - victoriametrics_install
 
 - include: configure.yml
-  become: true
   tags:
     - victoriametrics_configure
 
 - name: ensure victoria-metrics service is started and enabled
-  become: true
   systemd:
     daemon_reload: true
     name: victoriametrics
