@@ -18,8 +18,8 @@ Name | Default Value | Description
 `victoriametrics_system_group` | "victoriametrics" |
 `victoriametrics_install_dir` | "/usr/local/bin" |
 `victoriametrics_repo_dir` | "/var/tmp/archive" | vm files
-`victoriametrics_storageDataPath` | "/var/lib/vm" | storage directory
-`victoriametrics_retentionPeriod` | "12" | 1 year retention
+`victoriametrics_storage_data_path` | "/var/lib/vm" | storage directory
+`victoriametrics_retention_period` | "12" | 1 year retention
 
 Read this [https://docs.victoriametrics.com/#environment-variables](https://docs.victoriametrics.com/#environment-variables) аnd set more vars, put it into `templates/victoriametrics.j2`
 
