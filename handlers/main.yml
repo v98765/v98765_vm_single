@@ -1,7 +1,6 @@
 ---
 # handlers file for v98765_vm_single
 - name: restart vm
-  become: true
   systemd:
     daemon_reload: true
     name: vm
