@@ -4,9 +4,9 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: instance_vm_single
+  - name: centos8
+    image: centos:8
     privileged: true
-    image: docker.io/pycontribs/centos:8
     tmpfs:
       - /run
       - /tmp
@@ -21,7 +21,6 @@ provisioner:
   config_options:
     defaults:
       interpreter_python: auto_silent
-      callback_whitelist: profile_tasks, timer, yaml
     ssh_connection:
       pipelining: false
 verifier:
