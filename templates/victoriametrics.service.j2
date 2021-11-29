@@ -15,11 +15,12 @@ ExecStart={{ victoriametrics_install_dir }}/victoriametrics -envflag.enable -env
 SyslogIdentifier=victoriametrics
 Restart=always
 LimitNOFILE=infinity
+ReadWriteDirectories={{ victoriametrics_storage_data_path }}
 
 PrivateTmp=yes
 ProtectHome=yes
 NoNewPrivileges=yes
-ProtectSystem=full
+ProtectSystem=strict
 ProtectControlGroups=true
 ProtectKernelModules=true
 ProtectKernelTunables=yes
