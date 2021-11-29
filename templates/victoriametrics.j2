@@ -1,2 +1,8 @@
-VM_storageDataPath={{ victoriametrics_storageDataPath }}
-VM_retentionPeriod={{ victoriametrics_retentionPeriod }}
+{{ ansible_managed | comment }}
+
+# req.
+VM_storageDataPath={{ victoriametrics_storage_data_path }}
+# opt.
+{% if victoriametrics_retention_period | length > 0 %}
+VM_retentionPeriod={{ victoriametrics_retention_period }}
+{% endif %}

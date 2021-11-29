@@ -24,9 +24,9 @@
         remote_src: yes
       notify: restart vm
 
-- name: "Create victoriametrics data directory {{ victoriametrics_storageDataPath }}"
+- name: "Create victoriametrics data directory {{ victoriametrics_storage_data_path }}"
   file:
-    path: "{{ victoriametrics_storageDataPath }}"
+    path: "{{ victoriametrics_storage_data_path }}"
     state: directory
     owner: "{{ victoriametrics_system_user }}"
     group: "{{ victoriametrics_system_group }}"

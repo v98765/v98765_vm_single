@@ -7,5 +7,5 @@ victoriametrics_install_dir: "/usr/local/bin"
 victoriametrics_repo_dir: "/var/tmp/archive"
 # vm flags for env file
 # https://github.com/VictoriaMetrics/VictoriaMetrics#environment-variables
-victoriametrics_storageDataPath: "/var/lib/vm"
-victoriametrics_retentionPeriod: "12"
+victoriametrics_storage_data_path: "/var/lib/vm"
+victoriametrics_retention_period: "12"
