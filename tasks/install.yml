@@ -4,6 +4,7 @@
     - name: "Ensure existense of /tmp/victoria-metrics-v{{ victoriametrics_version }}"
       ansible.builtin.file:
         path: "/tmp/victoria-metrics-v{{ victoriametrics_version }}"
+        mode: 0755
         state: directory
 
     - name: Unarchive victoriametrics binaries
